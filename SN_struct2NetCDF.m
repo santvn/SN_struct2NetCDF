@@ -84,6 +84,7 @@ if isstruct(myStruct)
             tmp_fname = [p '/' f '.' varNames{i} e];
             struct2NetCDF(tmp_fname,myStruct.(varNames{i}),varNames{i});
             if iscell(myStruct.(varNames{i}))
+                clear('finfo');
                 finfo.Name   = varNames{i};
                 finfo.Format = 'netcdf4_classic';
                 finfo.Dimensions(1).Name   = [varNames{i} '_dim1'];
