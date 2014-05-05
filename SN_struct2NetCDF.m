@@ -1,3 +1,4 @@
+function SN_struct2NetCDF(filename,myStruct)
 % SN_struct2NetCDF converts MATLAB Struct to netCDF file
 %
 % Usage: SN_struct2NetCDF(filename,structvar)
@@ -10,8 +11,6 @@
 % Created: San Nguyen 2014 04 30
 % Updated: San Nguyen 2014 05 03
 %
-
-function SN_struct2NetCDF(filename,myStruct)
 if (exist(filename,'file'))
     delete(filename);
 end
